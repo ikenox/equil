@@ -252,7 +252,7 @@ def main
 
   target_task = builder.parse.get_child(task_name.split('.'))
   raise "task `#{task_name}` is not found" unless target_task
-  executor = TaskExecutor.new(target_task, dry: options["dry"])
+  executor = TaskExecutor.new(target_task, dry: options[:dry])
   executor.execute
 
   puts ""
