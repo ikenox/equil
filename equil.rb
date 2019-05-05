@@ -1,11 +1,6 @@
 require 'optparse'
 
 class TaskBuilder
-  def self.create_root(&block)
-    t = TaskBuilder.new(name: :root, do_if: Condition.new {nil}, cmd: nil)
-    t.instance_eval &block
-    t
-  end
 
   def initialize(name:, do_if:, cmd:)
     @name = name
@@ -242,17 +237,22 @@ end
 # ================================
 
 def main
-  params = ARGV.getopts(nil, 'dry', "task:")
-  # builder = TaskBuilder.create_root &method(:equil)
+  options = {}
+
+  parser = OptionParser.new
+  parser.on('--dry') {|v| options[:dry] = v}
+  parser.parse!(ARGV)
+
+  task_name = ARGV[0]
 
   builder = TaskBuilder.new(name: :root, do_if: Condition.new {nil}, cmd: nil)
   builder.instance_eval do
     method(:equil).call
   end
 
-  executed_task = params["task"] ? params["task"].split('.').each {|t| t.to_sym} : [:default]
-
-  executor = TaskExecutor.new(builder.parse.get_child(executed_task), dry: params["dry"])
+  target_task = builder.parse.get_child(task_name.split('.'))
+  raise "task `#{task_name}` is not found" unless target_task
+  executor = TaskExecutor.new(target_task, dry: options["dry"])
   executor.execute
 
   puts ""
