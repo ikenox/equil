@@ -50,9 +50,11 @@ def equil
 end
 ```
 
+This is Ruby DSL, so if you are familiar with Ruby, you can write the definition as Ruby program.
+
 If you need more practical example, see [ikenox/dotfiles/provision-tasks.rb](https://github.com/ikenox/dotfiles/blob/master/provision-tasks.rb).
 
-This is Ruby DSL, so if you are familiar with Ruby, you can write the definition as Ruby program.
+### Task definition details
 
 The basic task definition syntax is as follows.
 
@@ -94,7 +96,7 @@ Tell Equil on the each tasks,
 
 
 
-## Execute task
+## Task execution
 
 If your task definition file is in local, do the following to execute task `:essentials`.
 
