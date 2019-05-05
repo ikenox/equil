@@ -243,7 +243,7 @@ def main
   parser.on('--dry') {|v| options[:dry] = v}
   parser.parse!(ARGV)
 
-  task_name = ARGV[0]
+  task_name = ARGV[0] or raise "Missing argument: please specify execution task name"
 
   builder = TaskBuilder.new(name: :root, do_if: Condition.new {nil}, cmd: nil)
   builder.instance_eval do
