@@ -98,13 +98,13 @@ Tell Equil on the each tasks,
 
 ## Task execution
 
-If your task definition file is in local, do the following to execute task `:essentials`.
+If your task definition file `equil-task.rb` is on local computer, do the following to execute task `:essentials`.
 
 ```sh
 $ bash -c 'ruby -e "$({ cat ./equil-task.rb; curl -fsSL https://raw.githubusercontent.com/ikenox/equil/0.1.0/equil.rb; })" essentials'
 ```
 
-or, if your task definition file is on the web (e.g. On GitHub), do the following to execute task `:essentials`.
+or, if your task definition file `equil-task.rb` is on the web (e.g. On GitHub), do the following to execute task `:essentials`.
 
 ```sh
 $ bash -c 'ruby -e "$({ curl -fsSL https://raw.github.com/your/repository/master/equil-task.rb; curl -fsSL https://raw.githubusercontent.com/ikenox/equil/0.1.0/equil.rb; })" essentials'
