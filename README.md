@@ -39,7 +39,7 @@ Equil is just a very thin wrapper of shell scripts for provisioning task definit
           task if_err("git config user.name"), -> {
             print "please type your git user.name: "
             name = STDIN.gets.chomp
-            "git config -f ~/.gitconfig.local user.name '#{name}'"
+            "git config user.name '#{name}'"
           }
         end
       end
