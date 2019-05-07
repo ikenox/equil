@@ -7,7 +7,7 @@ It equilibrates your computer to the state you need.
 
 Equil is for the person who wants to automate provisioning of their personal computer and feels like:
 
-- Pure shell scripts or Makefile don't have enough readability and writability for provisioning task definition.
+- Pure shell scripts or Makefile doesn't have enough readability and writability for provisioning task definition.
 - Popular provisioning tools (e.g. Ansible, Chef, ...) have rich features but a little harder to learn.
 
 Equil is just a very thin wrapper of shell scripts for provisioning task definition, written in Ruby DSL.
