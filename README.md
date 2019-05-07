@@ -59,13 +59,15 @@ Equil is just a very thin wrapper of shell scripts for provisioning task definit
     If you put the task definition file `equil-task.rb` on your local computer, do the following to execute task `:essentials`.
 
     ```sh
-    $ bash -c 'ruby -e "$({ cat ./equil-task.rb; curl -fsSL https://raw.githubusercontent.com/ikenox/equil/0.1.0/equil.rb; })" essentials'
+    # bash
+    $ ruby -e "$({ cat ./equil-task.rb; curl -fsSL https://raw.githubusercontent.com/ikenox/equil/0.1.0/equil.rb; })" essentials
     ```
 
     otherwise, if you put it on the web (e.g. on GitHub), do the following to execute task `:essentials`.
 
     ```sh
-    $ bash -c 'ruby -e "$({ curl -fsSL https://raw.github.com/your/repository/master/equil-task.rb; curl -fsSL https://raw.githubusercontent.com/ikenox/equil/0.1.0/equil.rb; })" essentials'
+    # bash
+    $ ruby -e "$({ curl -fsSL https://raw.github.com/your/repository/master/equil-task.rb; curl -fsSL https://raw.githubusercontent.com/ikenox/equil/0.1.0/equil.rb; })" essentials
     ```
 
 4. Result
