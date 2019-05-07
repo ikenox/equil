@@ -16,7 +16,7 @@ Equil is just a very thin wrapper of shell scripts for provisioning task definit
 
 1. Install
 
-    You don't have to install because its source is small single file and got from the web by `curl` command when execution.
+    You don't have to install because its source is small single file and you can get it from the web by `curl` command when execution.
 
 2. Prepare task definition file
 
