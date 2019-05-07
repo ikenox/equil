@@ -140,6 +140,10 @@ Tell Equil on the each tasks,
 
 You can define a task alias to avoid repeat similar definition.
 
+The following two are equivalent.
+
+a. 
+
 ```ruby
 def equil
   task :install_some_packages do
@@ -150,7 +154,7 @@ def equil
 end
 ```
 
-This is equivalent to as follows.
+b. 
 
 ```ruby
 def equil
