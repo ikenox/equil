@@ -108,33 +108,37 @@ task [TASK_NAME,] [EXEC_CONDITION,] {COMMAND|LAMBDA_FUNC|TASK_LIST}
 Tell Equil on the each tasks,
 
 1. What state the task needs to be executed (`EXEC_CONDITION`)
-    - Example of `EXEC_CONDITION`:
-        ```ruby
-        if_err('which git')
-        ```
+
+    Example `EXEC_CONDITION`:
+    ```ruby
+    if_err('which git')
+    ```
 2. What needs to be executed (`COMMAND` or `LAMBDA_FUNC` or `TASK_LIST`)
-    - Example of `COMMAND`:
-       ```ruby
-       'brew install git'
-       ```
-    - Example of `LAMBDA_FUNC`:
-       ```ruby
-       -> {
-         print "please type your git user.name: "
-         name = STDIN.gets.chomp
-         "git config -f ~/.gitconfig.local user.name '#{name}'"
-       }
-       ```
-       `-> { ... }` is `LAMBDA_FUNC`, and this lambda function should return a string of shell commands.
-    - Example of `TASK_LIST`:
-        ```ruby
-        do
-          task ...
-          task ...
-          task ...
-          ...
-        end
-        ```
+
+   Example `COMMAND`:
+   ```ruby
+   'brew install git'
+   ```
+   
+   Example `LAMBDA_FUNC`:
+   ```ruby
+   -> {
+     print "please type your git user.name: "
+     name = STDIN.gets.chomp
+     "git config -f ~/.gitconfig.local user.name '#{name}'"
+   }
+   ```
+   `-> { ... }` is `LAMBDA_FUNC`, and this lambda function should return a string of shell commands.
+   
+   Example `TASK_LIST`:
+    ```ruby
+    do
+      task ...
+      task ...
+      task ...
+      ...
+    end
+    ```
 
 # Advanced
 
