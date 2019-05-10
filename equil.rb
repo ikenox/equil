@@ -168,6 +168,11 @@ def if_err(command)
 end
 
 #@return Condition
+def if_ok(command)
+  Condition.new {exec? command, silent: true}
+end
+
+#@return Condition
 def if_not_exist(path)
   if_err "ls #{path}"
 end
