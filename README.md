@@ -5,7 +5,7 @@ It equilibrates your computer to the state you need.
 
 # Why Equil
 
-Equil is for the person who wants to automate provisioning of their personal computer and feels like:
+Equil is for the person who wants to automate provisioning of their personal computer and who feels like:
 
 - Pure shell scripts or Makefile doesn't have enough readability and writability for provisioning task definition.
 - Popular provisioning tools (e.g. Ansible, Chef, ...) have rich features but a little harder to learn.
