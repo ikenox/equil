@@ -10,7 +10,7 @@ Equil is for the person who wants to automate provisioning of their personal com
 - Pure shell scripts or Makefile doesn't have enough readability and writability for provisioning task definition.
 - Popular provisioning tools (e.g. Ansible, Chef, ...) have rich features but a little harder to learn.
 
-Equil is just a very thin wrapper of shell scripts for provisioning task definition, written in Ruby DSL.
+Equil is just a very thin wrapper of the shell scripts for provisioning task definition, written in Ruby DSL.
 
 # Usage
 
